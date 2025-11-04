@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anam AI Assistant - Production App</title>
+  </head>
+  <body>
+    <div style="text-align: center; padding: 20px;">
+      <h1>Interview with Cara</h1>
+
+      <!-- Interview Setup -->
+      <div id="interview-setup" style="margin-bottom: 20px;">
+        <input type="text" id="candidate-name" placeholder="Candidate Name" style="margin-right: 10px; padding: 5px;">
+        <input type="text" id="position" placeholder="Position Applied For" style="margin-right: 10px; padding: 5px;">
+        <button id="start-interview-btn">Start Interview</button>
+      </div>
+
+      <!-- Video Element -->
+      <video
+        id="persona-video"
+        autoplay
+        playsinline
+        style="max-width: 100%; border-radius: 8px;"
+      ></video>
+
+      <!-- Chat History Panel -->
+      <div
+        id="chat-history"
+        style="margin-top: 20px; padding: 10px; border: 1px solid #ccc; border-radius: 5px; max-height: 200px; overflow-y: auto; background: #f9f9f9;"
+      >
+        <p>Start a conversation to see your chat history</p>
+      </div>
+
+      <!-- Live Transcript -->
+      <div
+        id="live-transcript"
+        style="margin-top: 10px; padding: 10px; background-color: #e6e0ff; border-radius: 5px;"
+      >
+        <strong>Persona Live:</strong> <span id="transcript-text"></span>
+      </div>
+
+      <!-- Interview Controls -->
+      <div id="interview-controls" style="margin-top: 20px;">
+        <button id="stop-interview-btn" disabled>Stop Interview</button>
+        <button id="generate-doc-btn" disabled>Generate Documentation</button>
+      </div>
+
+      <!-- Status Display -->
+      <div id="status" style="margin-top: 20px; font-style: italic;"></div>
+
+      <!-- Documentation Display (hidden by default) -->
+      <div id="documentation" style="display: none; margin-top: 20px; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
+        <h3>Interview Documentation</h3>
+        <pre id="doc-content" style="background: #f5f5f5; padding: 10px; border-radius: 5px; white-space: pre-wrap;"></pre>
+        <button id="download-doc-btn">Download Documentation</button>
+      </div>
+    </div>
+
+    <style>
+      .mode-btn {
+        padding: 10px 20px;
+        margin: 0 5px;
+        border: 1px solid #ccc;
+        background: white;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      .mode-btn.active {
+        background: #007bff;
+        color: white;
+        border-color: #007bff;
+      }
+      input {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      button {
+        padding: 8px 16px;
+        border: none;
+        background: #007bff;
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #0056b3;
+      }
+      button:disabled {
+        background: #ccc;
+        cursor: not-allowed;
+      }
+    </style>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
