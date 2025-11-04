@@ -171,7 +171,6 @@ Generates documentation from interview responses.
 ```
 anam-app/
 ├── src/
-│   ├── app.js          # Basic Express server (not used in main app)
 │   └── server.js       # Main Express server
 ├── public/
 │   ├── index.html      # Frontend HTML
@@ -191,3 +190,4 @@ anam-app/
 ## License
 
 This project is licensed under the ISC License.
+
